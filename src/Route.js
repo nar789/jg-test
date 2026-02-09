@@ -27,7 +27,7 @@ export class Route {
     );
 
     //1. enetry point
-    app.listen(1110, function () {
+    app.listen(1111, function () {
       console.log("jg intro Server listen on *:1110");
     });
   }
