@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en" class="dark-theme">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="QR 관리 시스템" />
+    <meta property="og:title" content="QR 관리 시스템" />
+    <meta property="og:image" content="/assets/profile/title.png" />
+    <meta property="og:description" content="QR 관리 시스템" />
+
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Theme Styles-->
+    <link href="assets/css/dark-theme.css" rel="stylesheet" />
+    <link href="assets/css/semi-dark.css" rel="stylesheet" />
+    <link href="assets/css/header-colors.css" rel="stylesheet" />
+
+    <link href="/assets/css/neon.css" rel="stylesheet" />
+
+    <title>QR 관리 시스템</title>
+  </head>
+
+  <body>
+    <!--start wrapper-->
+    <div class="wrapper">
+      <!--start sidebar -->
+      <aside class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header">
+          <div>
+            <img
+              src="assets/images/logo-icon-2.png"
+              class="logo-icon"
+              alt="logo icon"
+            />
+          </div>
+          <div>
+            <h4 class="logo-text">JG로지스</h4>
+          </div>
+        </div>
+        <!--navigation-->
+        <ul class="metismenu" id="menu">
+          <li class="" id="home-menu">
+            <a href="/">
+              <div class="parent-icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </div>
+              <div class="menu-title">대시보드</div>
+            </a>
+          </li>
+          <li class="mm-active">
+            <a href="/qr" class="has-arrow">
+              <div class="parent-icon">
+                <i class="lni lni-calculator"></i>
+              </div>
+              <div class="menu-title">QR생성</div>
+            </a>
+          </li>
+          <li>
+            <a href="/read" class="has-arrow">
+              <div class="parent-icon">
+                <i class="lni lni-emoji-cool"></i>
+              </div>
+              <div class="menu-title">QR찍으면</div>
+            </a>
+          </li>
+
+          <li>
+            <a href="javascript:;">
+              <div class="parent-icon">
+                <ion-icon name="link-outline"></ion-icon>
+              </div>
+              <div class="menu-title">흄 지원</div>
+            </a>
+          </li>
+        </ul>
+        <!--end navigation-->
+      </aside>
+      <!--end sidebar -->
+
+      <!--start top header-->
+      <header class="top-header">
+        <nav class="navbar navbar-expand gap-3">
+          <div class="toggle-icon">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <form class="searchbar">
+            <div
+              class="position-absolute top-50 translate-middle-y search-icon ms-3"
+            >
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <input class="form-control" type="text" placeholder="검색 뭐시기" />
+            <div
+              class="position-absolute top-50 translate-middle-y search-close-icon"
+            >
+              <ion-icon name="close-outline"></ion-icon>
+            </div>
+          </form>
+          <div class="top-navbar-right ms-auto">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                <a class="nav-link mobile-search-button" href="javascript:;">
+                  <div class="">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link dark-mode-icon" href="javascript:;">
+                  <div class="mode-icon">
+                    <ion-icon name="moon-outline"></ion-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item dropdown dropdown-large dropdown-apps">
+                <a
+                  class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                  href="javascript:;"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="">
+                    <ion-icon name="apps-outline"></ion-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item dropdown dropdown-large">
+                <a
+                  class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                  href="javascript:;"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="position-relative">
+                    <span class="notify-badge">8</span>
+                    <ion-icon name="notifications-outline"></ion-icon>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item dropdown dropdown-user-setting">
+                <a
+                  class="nav-link dropdown-toggle dropdown-toggle-nocaret"
+                  href="javascript:;"
+                  data-bs-toggle="dropdown"
+                >
+                  <div class="user-setting">
+                    <img
+                      src="assets/images/avatars/06.png"
+                      class="user-img"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex flex-row align-items-center gap-2">
+                        <img
+                          src="assets/images/avatars/06.png"
+                          alt=""
+                          class="rounded-circle"
+                          width="54"
+                          height="54"
+                        />
+                        <div class="">
+                          <h6 class="mb-0 dropdown-user-name">재균</h6>
+                          <small
+                            class="mb-0 dropdown-user-designation text-secondary"
+                            >대장</small
+                          >
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>내 정보</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="settings-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>설정</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="speedometer-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>QR관리?</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="wallet-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>졸려</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="cloud-download-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>자자</span></div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="javascript:;">
+                      <div class="d-flex align-items-center">
+                        <div class="">
+                          <ion-icon name="log-out-outline"></ion-icon>
+                        </div>
+                        <div class="ms-3"><span>로그아웃</span></div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--end top header-->
+
+      <!-- start page content wrapper-->
+      <div class="page-content-wrapper">
+        <!-- start page content-->
+        <div class="page-content">
+          <!--start breadcrumb-->
+          <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">QR생성</div>
+            <div class="ps-3">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 p-0 align-items-center">
+                  <li class="breadcrumb-item">
+                    <a href="javascript:;">
+                      <ion-icon name="home-outline"></ion-icon>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    필수정보를 입력해 QR을 만들자
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <!--end breadcrumb-->
+
+          <div class="card">
+            <div class="card-body">
+              <div class="border p-3 rounded">
+                <h6 class="mb-0 text-uppercase">QR생성을 위한 필수정보</h6>
+                <hr />
+                <form class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label">기사 이름?</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">기타</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">현위치</label>
+                    <input type="text" class="form-control" />
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">하고픈말</label>
+                    <textarea class="form-control" rows="4" cols="4"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary font-22">
+                        QR생성~~!!
+                      </button>
+                    </div>
+                  </div>
+                </form>
+                <hr class="mt-5 mb-5" />
+                <div class="row">
+                  <div class="col justify-content-center align-items-center">
+                    <h3 class="text-center mb-3">유효시간 00:00:59</h3>
+                    <div class="text-center">
+                      <img src="/assets/qrimg.jpg" width="300" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end row-->
+        </div>
+        <!-- end page content-->
+      </div>
+      <!--end page content wrapper-->
+
+      <!--start footer-->
+      <footer class="footer">
+        <div class="footer-text">
+          Copyright © 2026. HUME All right reserved.
+        </div>
+      </footer>
+      <!--end footer-->
+
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+      </a>
+      <!--End Back To Top Button-->
+
+      <!--start switcher-->
+      <!-- <div class="switcher-body">
+        <button
+          class="btn btn-primary btn-switcher shadow-sm"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <ion-icon name="color-palette-outline" class="me-0"></ion-icon>
+        </button>
+        <div
+          class="offcanvas offcanvas-end shadow border-start-0 p-2"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+          tabindex="-1"
+          id="offcanvasScrolling"
+        >
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+              Theme Customizer
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div> -->
+      <!-- <div class="offcanvas-body">
+            <h6 class="mb-0">Theme Variation</h6>
+            <hr />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="LightTheme"
+                value="option1"
+                checked
+              />
+              <label class="form-check-label" for="LightTheme">Light</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="DarkTheme"
+                value="option2"
+              />
+              <label class="form-check-label" for="DarkTheme">Dark</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="SemiDark"
+                value="option3"
+              />
+              <label class="form-check-label" for="SemiDark">Semi Dark</label>
+            </div>
+            <hr />
+            <h6 class="mb-0">Header Colors</h6>
+            <hr />
+            <div class="header-colors-indigators">
+              <div class="row row-cols-auto g-3">
+                <div class="col">
+                  <div class="indigator headercolor1" id="headercolor1"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor2" id="headercolor2"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor3" id="headercolor3"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor4" id="headercolor4"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor5" id="headercolor5"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor6" id="headercolor6"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor7" id="headercolor7"></div>
+                </div>
+                <div class="col">
+                  <div class="indigator headercolor8" id="headercolor8"></div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div> -->
+      <!--end switcher-->
+
+      <!--start overlay-->
+      <!-- <div class="overlay nav-toggle-icon"></div> -->
+      <!--end overlay-->
+    </div>
+    <!--end wrapper-->
+
+    <!-- JS Files-->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <!--plugins-->
+    <script src="/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <script src="/assets/plugins/apexcharts-bundle/js/apexcharts.min.js"></script>
+    <script src="/assets/plugins/easyPieChart/jquery.easypiechart.js"></script>
+    <script src="/assets/plugins/chartjs/chart.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <!-- Main JS-->
+    <script src="/assets/js/main.js"></script>
+    <script>
+      window.onload = () => {
+        $("#home-menu").removeClass("mm-active");
+      };
+    </script>
+  </body>
+</html>

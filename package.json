@@ -1,0 +1,19 @@
+{
+  "name": "gwp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "bootstrap": "^5.3.8",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jquery": "^3.7.1"
+  },
+  "type": "module"
+}
